@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0xF894b43A4a15C8CB06665ae3BaB4A8CBD969B92f",
+  "SCAN_LINK": "https://etherscan.io/address/0xf894b43a4a15c8cb06665ae3bab4a8cbd969b92f",
+  "NETWORK": {
+    "NAME": "Ethereum",
+    "SYMBOL": "ETH",
+    "ID": 1
+  },
+  "NFT_NAME": "Little Warriorss",
+  "SYMBOL": "LW",
+  "MAX_SUPPLY": 5000,
+  "WEI_COST": 0,
+  "DISPLAY_COST": 0,
+  "GAS_LIMIT": 50000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/littlewarriorss",
+  "SHOW_BACKGROUND": true
+}
