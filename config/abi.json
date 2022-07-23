@@ -1,5 +1,65 @@
 [
 	{
+		"inputs": [],
+		"name": "ApprovalCallerNotOwnerNorApproved",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "ApprovalQueryForNonexistentToken",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "ApprovalToCurrentOwner",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "ApproveToCaller",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "BalanceQueryForZeroAddress",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "MintToZeroAddress",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "MintZeroQuantity",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "OwnerQueryForNonexistentToken",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "TransferCallerNotOwnerNorApproved",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "TransferFromIncorrectOwner",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "TransferToNonERC721ReceiverImplementer",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "TransferToZeroAddress",
+		"type": "error"
+	},
+	{
 		"anonymous": false,
 		"inputs": [
 			{
@@ -115,7 +175,7 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "_mintAmount",
+				"name": "numberOfTokens",
 				"type": "uint256"
 			}
 		],
@@ -125,28 +185,8 @@
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "bool",
-				"name": "_state",
-				"type": "bool"
-			}
-		],
-		"name": "pause",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [],
 		"name": "renounceOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "reveal",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -224,20 +264,7 @@
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "_newBaseExtension",
-				"type": "string"
-			}
-		],
-		"name": "setBaseExtension",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_newBaseURI",
+				"name": "baseURI",
 				"type": "string"
 			}
 		],
@@ -250,11 +277,24 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "_newCost",
+				"name": "_limit",
 				"type": "uint256"
 			}
 		],
-		"name": "setCost",
+		"name": "setFreeLimitPerWallet",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "_isPublicSaleActive",
+				"type": "bool"
+			}
+		],
+		"name": "setIsPublicSaleActive",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -263,11 +303,11 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "_newmaxMintAmount",
+				"name": "_limit",
 				"type": "uint256"
 			}
 		],
-		"name": "setmaxMintAmount",
+		"name": "setMaxLimitPerTransaction",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -275,12 +315,25 @@
 	{
 		"inputs": [
 			{
-				"internalType": "string",
-				"name": "_notRevealedURI",
-				"type": "string"
+				"internalType": "uint256",
+				"name": "_numfreemints",
+				"type": "uint256"
 			}
 		],
-		"name": "setNotRevealedURI",
+		"name": "setNumFreeMints",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_price",
+				"type": "uint256"
+			}
+		],
+		"name": "setSalePrice",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -322,37 +375,29 @@
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_name",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_symbol",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_initBaseURI",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_initNotRevealedUri",
-				"type": "string"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
 		"inputs": [],
 		"name": "withdraw",
 		"outputs": [],
-		"stateMutability": "payable",
+		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "quantity",
+				"type": "uint256"
+			}
+		],
+		"name": "WLMint",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
 	},
 	{
 		"inputs": [
@@ -375,7 +420,7 @@
 	},
 	{
 		"inputs": [],
-		"name": "baseExtension",
+		"name": "baseTokenURI",
 		"outputs": [
 			{
 				"internalType": "string",
@@ -388,7 +433,7 @@
 	},
 	{
 		"inputs": [],
-		"name": "cost",
+		"name": "freeNFTAlreadyMinted",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -444,7 +489,33 @@
 	},
 	{
 		"inputs": [],
-		"name": "maxMintAmount",
+		"name": "isPublicSaleActive",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MAX_FREE_PER_WALLET",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MAX_MINTS_PER_TX",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -483,12 +554,12 @@
 	},
 	{
 		"inputs": [],
-		"name": "notRevealedUri",
+		"name": "NUM_FREE_MINTS",
 		"outputs": [
 			{
-				"internalType": "string",
+				"internalType": "uint256",
 				"name": "",
-				"type": "string"
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -528,25 +599,12 @@
 	},
 	{
 		"inputs": [],
-		"name": "paused",
+		"name": "PUBLIC_SALE_PRICE",
 		"outputs": [
 			{
-				"internalType": "bool",
+				"internalType": "uint256",
 				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "revealed",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -588,50 +646,7 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "index",
-				"type": "uint256"
-			}
-		],
-		"name": "tokenByIndex",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "index",
-				"type": "uint256"
-			}
-		],
-		"name": "tokenOfOwnerByIndex",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
+				"name": "_tokenId",
 				"type": "uint256"
 			}
 		],
@@ -654,25 +669,6 @@
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_owner",
-				"type": "address"
-			}
-		],
-		"name": "walletOfOwner",
-		"outputs": [
-			{
-				"internalType": "uint256[]",
-				"name": "",
-				"type": "uint256[]"
 			}
 		],
 		"stateMutability": "view",
