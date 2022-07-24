@@ -1,10 +1,10 @@
 {
-  "CONTRACT_ADDRESS": "0x73cc6807B3c8E820E3a9d48C4593e34da5e08610",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x73cc6807b3c8e820e3a9d48c4593e34da5e08610",
+  "CONTRACT_ADDRESS": "0x244E80e0a6a9CB985a9aBcD228DC2b450835C6Db",
+  "SCAN_LINK": "https://etherscan.io/address/0x244e80e0a6a9cb985a9abcd228dc2b450835c6db",
   "NETWORK": {
-    "NAME": "Rinkeby",
+    "NAME": "Ethereum",
     "SYMBOL": "ETH",
-    "ID": 4
+    "ID": 1
   },
   "NFT_NAME": "Brainless Official",
   "SYMBOL": "NFT",
