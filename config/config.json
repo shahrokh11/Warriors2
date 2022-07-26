@@ -11,7 +11,7 @@
   "MAX_SUPPLY": 5555,
   "WEI_COST": 2000000000000000,
   "DISPLAY_COST": 0.002,
-  "GAS_LIMIT":130000,
+  "GAS_LIMIT":160000,
   "MARKETPLACE": "Opeansea",
   "MARKETPLACE_LINK": "https://opensea.io/collection/brainless-official",
   "SHOW_BACKGROUND": true
